@@ -1,4 +1,4 @@
-package com.tema1.goods;
+package com.goods;
 
 import java.util.Map;
 

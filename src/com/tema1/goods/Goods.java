@@ -1,4 +1,4 @@
-package com.tema1.goods;
+package com.goods;
 
 public abstract class Goods {
     private final int id;

@@ -1,4 +1,4 @@
-package com.tema1.goods;
+package com.goods;
 
 public final class LegalGoods extends Goods {
     private final int kingBonus;

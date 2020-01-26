@@ -1,4 +1,4 @@
-package com.tema1.main;
+package com.main;
 
 import java.util.ArrayList;
 import java.util.List;
