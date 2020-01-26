@@ -43,14 +43,8 @@ public final class Game {
           }
         }
         sheriff.inspect(players, cards);
-
-//        for (BasePlayer player : players) {
-//          player.printStand();
-//        }
-//        System.out.println("=======");
       }
     }
-
     computeScore();
   }
 
@@ -70,26 +64,19 @@ public final class Game {
           }
         }
         if (players.get(best).getGoodFreq(good) != 0) {
-          players
-              .get(best)
-              .addCoins(
-                  ((LegalGoods) GoodsFactory.getInstance().getGoodsById(good)).getKingBonus());
+          players.get(best).addCoins(((LegalGoods) GoodsFactory.getInstance().getGoodsById(good)).getKingBonus());
         }
         int best2 = 0;
         if (best == best2) {
           best2++;
         }
         for (int player = 0; player < players.size(); ++player) {
-          if (player != best
-              && players.get(player).getGoodFreq(good) > players.get(best2).getGoodFreq(good)) {
+          if (player != best && players.get(player).getGoodFreq(good) > players.get(best2).getGoodFreq(good)) {
             best2 = player;
           }
         }
         if (players.get(best2).getGoodFreq(good) != 0) {
-          players
-              .get(best2)
-              .addCoins(
-                  ((LegalGoods) GoodsFactory.getInstance().getGoodsById(good)).getQueenBonus());
+          players.get(best2).addCoins(((LegalGoods) GoodsFactory.getInstance().getGoodsById(good)).getQueenBonus());
         }
       }
     }
